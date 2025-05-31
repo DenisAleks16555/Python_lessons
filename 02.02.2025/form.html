@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Add new contact</h2>
+    <form action="" method="get">
+      <b>name </b><input type="text" placeholder="Enter Name" name="name" />
+      <br />
+      <br />
+      <input type="submit" value="Сохранить" />
+      <input
+        type="button"
+        onclick="add_Number()"
+        value="Добавить ещё один номер"
+        id="addNumber"
+      />
+      <br />
+      <br />
+      <b>Phone number </b>
+      <input
+        type="text"
+        name="phone_num"
+        id="phone_num"
+        placeholder="Enter phone number"
+      />
+      <b>Phone type</b>
+      <select name="type">
+        <option value="1">Мобильный</option>
+        <option value="2">Домашний</option>
+        <option value="3">Рабочий</option>
+      </select>
+      <b>Priority</b>
+      <input type="radio" name="main" value="1" checked />
+    </form>
+    <script>
+      function add_Number() {
+        if (typeof phoneNumber == "undefined") {
+          //Узнать тип переменной
+          phoneNumber = 1;
+        }
+        phoneNumber++;
+        let f = document.forms[0];
+        //let br = document.createElement("br");//формирует html тег в js для дальнейшего взаимодействия
+        let b_number = document.createElement("b"); // <b></b>
+        b_number.innerText = "Phone number "; // <b>Phone number </b> (Что находится между открывающим и закрывающим тегами)
+        let input_num = document.createElement("input"); // <input type="">
+        input_num.type = "text";
+        input_num.name = "phone_num" + phoneNumber; // name="phone_num2"
+        input_num.id = "phone_num" + phoneNumber; // id="phone_num2"
+        input_num.placeholder = "Enter phone number"; // placeholder = "Enter phone number"
+        let b_type = document.createElement("b");
+        b_type.innerText = " Phone type ";
+        let selector = f.elements["type"];
+        let new_selector = selector.cloneNode(true);
+        new_selector.name = "type" + phoneNumber;
+        let priority = document.createElement("b");
+        priority.innerText = " Priority ";
+        let radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = "main";
+        radio.value = phoneNumber;
+        //console.log(new_selector);
+
+        f.appendChild(document.createElement("br")); //добавляем в конец списка
+        f.appendChild(document.createElement("br")); //добавляем в конец списка
+        f.appendChild(b_number);
+        f.appendChild(input_num);
+        f.appendChild(b_type);
+        f.appendChild(new_selector);
+        f.appendChild(priority);
+        f.appendChild(radio);
+        console.log(phoneNumber);
+      }
+    </script>
+  </body>
+</html>

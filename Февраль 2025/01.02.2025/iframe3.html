@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        iframe{
+            width: 500px;
+            height: 250px;
+            margin-left: 20px;
+        }
+        button{
+            background-color: aqua;
+            width: 500px;
+            height: 50px;
+            margin-left: 20px;
+        }
+
+    </style>
+</head>
+<body>
+   <h2>Как добраться</h2>
+   <!-- /*ссылка на пустую страницу*/ -->
+   <iframe src="about:blank"></iframe>
+   <iframe src="about:blank"></iframe>
+   <iframe src="about:blank"></iframe>
+  
+<br>
+<button onclick="window.frames[0].location='https://yandex.ru/map-widget/v1/?um=constructor%3A6a6b33017d2141b01ef8e2d85611c0ad7e166f608849d2f775431009fefba7dd&amp;source=constructor'">Активировать карту№1</button>
+<button onclick="window.frames[1].location='https://webref.ru/'">Активировать карту№2</button>
+<button onclick="window.frames[2].location='https://journal.top-academy.ru/ru/auth/login/index?returnUrl=%2Fru%2Fmain%2Fdashboard%2Fpage%2Findex'">Активировать карту№3</button>
+
+</body>
+</html>
