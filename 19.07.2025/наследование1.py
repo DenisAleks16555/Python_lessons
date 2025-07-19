@@ -1,0 +1,20 @@
+class Animal:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def sleep(self,):
+        print("Zzzz")
+
+class Cat(Animal):
+    pass
+
+_animal = Animal("животное", 10)
+_cat = Cat("Леопольд", 45)
+
+
+print(_animal.name)
+print(_cat.name)
+
+_animal.sleep()
+_cat.sleep()
