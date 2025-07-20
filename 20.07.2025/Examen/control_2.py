@@ -20,20 +20,19 @@
 
 # Герой Арагорн, Здоровье: 75
 
+class Hero:
+    def __init__(self, damage, health):
+        self.__damage = damage
+        self.__health = health
 
-# class Hero:
-#     def __init__(self, damage, health):
-#         self.__damage = damage
-#         self.__health = health
+    def take_damage(self,damage):
+        self.health -= damage
+        print(f"{self.name}получил{damage}урона.Осталось{self.health}здоровья.")
 
-#     def attack(self,target):
-#         damage = 25
-#         target.take_damage(damage)
-
-#     def take_damage(self, damage):
-        # self.health = 
-
-
-# print()
+    def __str__(self):
+        return f'Герой{self.name},Здоровье: {self.health}'
+hero1 = Hero('Aragorn',100)
+hero1.take_damage(25)
+print(hero1)
 
 
