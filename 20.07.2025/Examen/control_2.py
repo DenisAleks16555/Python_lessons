@@ -27,19 +27,6 @@ class Hero:
 hero1 = Hero('Aragorn', 100)
 hero1.take_damage(25)  # Проверяем получение урона
 print(hero1)  # Проверяем, что здоровье изменилось
-# class Hero:
-#     def __init__(self, name, health):
-#         self.__name = name
-#         self.__health = health
 
-#     def take_damage(self,damage):
-#         self.__health -= damage
-#         print(f"{self.__name}получил{damage}урона.Осталось{self.__health}здоровья.")
-
-#     def __str__(self):
-#         return f'Герой{self.__name},Здоровье: {self.__health}'
-# hero1 = Hero('Aragorn',100)
-# hero1.take_damage(25)
-# print(hero1)
 
 
