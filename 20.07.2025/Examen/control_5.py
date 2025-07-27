@@ -7,25 +7,43 @@
 # Пример использования:
 
 # Hero.show_rules() # Вызов статического метода
-
-
 # warrior = Hero.create_warrior()
-
 # mage = Hero.create_mage()
-
-
 # print(warrior)
-
 # print(mage)
 
-   
-
-
 # Ожидаемый результат:
-
-
 # Правила игры: побеждает тот, кто остался жив.
-
 # Герой Воин, Здоровье: 110
-
 # Герой Маг, Здоровье: 80
+
+class Hero:
+    def __init__(self, name, health):
+        self.name = name
+        self.health = health
+
+    def __str__(self):
+        return f"Герой {self.name}, Здоровье: {self.health}"
+
+    @staticmethod
+
+    def show_rules():
+        print("Правила игры: побеждает тот, кто остался жив")
+
+
+
+    @classmethod
+    def create_warrior(cls):
+        return cls("Воин",110)
+
+    @classmethod
+    def create_mage(cls):
+        return cls("Маг",80)
+    
+Hero.show_rules()  # Выводит правила
+warrior = Hero.create_warrior()
+mage = Hero.create_mage()
+print(warrior)
+print(mage)
+
+
