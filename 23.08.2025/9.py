@@ -5,14 +5,15 @@ cursor = connection.cursor()
 
 def add_new_worker(name, age, profession):
     cursor.execute('''
-    INSERT INTO workers (name, age, profession)
+    INSERT INTO workers (name, age, profesion)
     VALUES (?, ?, ?)               
 ''', (name, age, profession))
 
 connection.commit()
 
 def delete_worker(worker_id):
-    cursor.execute("DELETE FROM workers WHERE id = ?", (worker_id)) 
+    cursor.execute("DELETE FROM workers WHERE id = ?", (worker_id,)) # (Это кортеж,когда в кортеже одно значение всегда ставиться запятая
+    # worker_id,)
     connection.commit()
 
 def show_workers():
