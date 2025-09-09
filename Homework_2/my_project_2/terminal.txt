@@ -1,0 +1,194 @@
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons (master)
+$ cd /OneDrive/Рабочий стол/MyPythonProjects/Python_lessons
+bash: cd: too many arguments
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons (master)
+$ mkdir my_project
+mkdir: cannot create directory ‘my_project’: File exists
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons (master)     
+$ mkdir my_project_2
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons (master)     
+$ cd my_project_2
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ mkdir forder1 forder2
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ touch folder1/file1.txt folder1/file2.txt folder2/file1.txt
+touch: cannot touch 'folder1/file1.txt': No such file or directory
+touch: cannot touch 'folder1/file2.txt': No such file or directory
+touch: cannot touch 'folder2/file1.txt': No such file or directory
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ mkdir -p folder1 folder2
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ touch folder1/file1.txt folder1/file2.txt folder2/file1.txt
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ echo "Hello from file1 in folder1" > folder1/file1.txt        
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ echo "Hello from file2 in folder1" > folder1/file2.txt
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ echo "Hello from file1 in folder2" > folder2/file1.txt
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ git init
+Initialized empty Git repository in C:/Users/0/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2/.git/
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ git add .
+warning: in the working copy of 'folder1/file1.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'folder1/file2.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'folder2/file1.txt', LF will be replaced by CRLF the next time Git touches it
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ git commit -m "Initial commit with folder structure and files"
+[master (root-commit) 3f9d3f8] Initial commit with folder structure and files
+ 3 files changed, 3 insertions(+)
+ create mode 100644 folder1/file1.txt
+ create mode 100644 folder1/file2.txt
+ create mode 100644 folder2/file1.txt
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ git checkout - b newbranch
+error: pathspec '-' did not match any file(s) known to git
+error: pathspec 'b' did not match any file(s) known to git
+error: pathspec 'newbranch' did not match any file(s) known to git
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ git checkout -b newbranch
+Switched to a new branch 'newbranch'
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (newbranch)
+$ mkdir folder3
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (newbranch)
+$ touch folder3/file1.txt folder3/file2.txt
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (newbranch)
+$ echo "Hello from file1 in folder3" > folder3/file1.txt
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (newbranch)
+$ echo "Hello from file2 in folder3" > folder3/file2.txt
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (newbranch)
+$ git add .
+warning: in the working copy of 'folder3/file1.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'folder3/file2.txt', LF will be replaced by CRLF the next time Git touches it
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (newbranch)
+$ git commit -m "Added folder3 with files in newbranch"
+[newbranch 3de2004] Added folder3 with files in newbranch
+ 2 files changed, 2 insertions(+)
+ create mode 100644 folder3/file1.txt
+ create mode 100644 folder3/file2.txt
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (newbranch)
+$ git checkout master
+Deletion of directory 'folder3' failed. Should I try again? (y/n) mkdir folder4
+Sorry, I did not understand your answer. Please type 'y' or 'n'
+Deletion of directory 'folder3' failed. Should I try again? (y/n)
+Sorry, I did not understand your answer. Please type 'y' or 'n'
+Deletion of directory 'folder3' failed. Should I try again? (y/n) git checkout newbranch
+Sorry, I did not understand your answer. Please type 'y' or 'n'
+Deletion of directory 'folder3' failed. Should I try again? (y/n) git status
+Sorry, I did not understand your answer. Please type 'y' or 'n'
+Deletion of directory 'folder3' failed. Should I try again? (y/n) n
+Switched to branch 'master'
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ echo "New changes in file1 of folder4" >> folder4/file1.txt
+bash: folder4/file1.txt: No such file or directory
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ mkdir folder4
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ touch folder4/file1.txt folder4/file2.txt
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ echo "Hello from file1 in folder4" > folder4/file1.txt
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ echo "Hello from file2 in folder4" > folder4/file2.txt
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ git add .
+warning: in the working copy of 'folder4/file1.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'folder4/file2.txt', LF will be replaced by CRLF the next time Git touches it
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ git commit -m "Added folder4 with files in master"
+[master 2ee4409] Added folder4 with files in master
+ 2 files changed, 2 insertions(+)
+ create mode 100644 folder4/file1.txt
+ create mode 100644 folder4/file2.txt
+
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ git checkout newbranch
+Deletion of directory 'folder4' failed. Should I try again? (y/nDeletion of directory 'folder4' failed. Should I try again? (y/n) git status
+Sorry, I did not understand your answer. Please type 'y' or 'n' 
+Deletion of directory 'folder4' failed. Should I try again? (y/nSorry, I did not understand your answer. Please type 'y' or 'n' 
+Deletion of directory 'folder4' failed. Should I try again? (y/nDeletion of directory 'folder4' failed. Should I try again? (y/n) n
+Updating files: 100% (4/4), done.
+Switched to branch 'newbranch'
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (newbranch)
+$ git status
+On branch newbranch
+nothing to commit, working tree clean
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (newbranch)
+$ git merge master
+Merge made by the 'ort' strategy.
+ folder4/file1.txt | 1 +
+ folder4/file2.txt | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 folder4/file1.txt
+ create mode 100644 folder4/file2.txt
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (newbranch)
+$ git status
+On branch newbranch
+nothing to commit, working tree clean
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (newbranch)
+$ git checkout master
+Deletion of directory 'folder3' failed. Should I try again? (y/n) n
+Switched to branch 'master'
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ echo "New changes in file1 of folder4" >> folder4/file1.txt
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ git add .
+warning: in the working copy of 'folder4/file1.txt', LF will be replaced by CRLF the next time Git touches it
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ git commit -m "Updated file1 in folder4 in master"
+[master 9ee2f3c] Updated file1 in folder4 in master
+ 1 file changed, 1 insertion(+)
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (master)
+$ git checkout newbranch
+Switched to branch 'newbranch'
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (newbranch)
+$ git merge master
+Merge made by the 'ort' strategy.
+ folder4/file1.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (newbranch)
+$ git commit -m "Объединение ветки master в newbranch"
+On branch newbranch
+nothing to commit, working tree clean
+
+0@DESKTOP-VU4VGS1 MINGW64 ~/OneDrive/Рабочий стол/MyPythonProjects/Python_lessons/my_project_2 (newbranch)
+$
