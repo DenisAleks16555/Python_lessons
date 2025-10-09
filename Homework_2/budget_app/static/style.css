@@ -1,0 +1,51 @@
+body {
+    background-color: #f0f8ff; /* светлый голубой фон */
+    font-family: Arial, sans-serif; /* шрифт для текста */
+    margin: 40px; /* отступы вокруг страницы */
+}
+h1 {
+    color: #4CAF50; /* зеленый цвет заголовка */
+    text-align: center; /* по центру */
+}
+p {
+    font-size: 18px; /* размер текста */
+    line-height: 1.6; /* межстрочный интервал */
+    max-width: 800px; /* ширина блока с текстом */
+    margin: 20px auto; /* отступы сверху и по бокам, выравнивание по центру */
+    color: #333; /* темный цвет текста */
+}
+.button {
+    display: block;
+    width: 200px;
+    margin: 30px auto;
+    padding: 10px;
+    background-color: #4CAF50; /* зеленая кнопка */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px; /* скругление */
+    font-size: 16px;
+}
+.button:hover {
+    background-color: #45a049; /* чуть темнее при наведении */
+}
+
+.expenses-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.expenses-table th, .expenses-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+
+/* CSS-файлы (стили оформления)
+JavaScript-файлы (скрипты)
+Изображения (логотипы, иконки, фоны и т.д.)
+Шрифты и другие ресурсы */
