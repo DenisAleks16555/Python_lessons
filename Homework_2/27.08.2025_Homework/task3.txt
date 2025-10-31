@@ -1,0 +1,3 @@
+SELECT SUM(b.price * b.quantity) AS total_cost
+FROM books b
+WHERE b.author = 'А. С. Пушкин';

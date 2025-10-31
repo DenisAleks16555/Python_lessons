@@ -1,0 +1,4 @@
+SELECT b.title, b.price
+FROM books b
+LEFT JOIN order_items oi ON b.id = oi.book_id
+WHERE oi.book_id IS NULL;

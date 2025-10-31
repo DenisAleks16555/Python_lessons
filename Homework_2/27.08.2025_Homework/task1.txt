@@ -1,0 +1,3 @@
+SELECT DISTINCT b.title, b.price
+FROM books b
+JOIN order_items oi ON b.id = oi.book_id;

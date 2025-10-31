@@ -1,0 +1,5 @@
+SELECT b.title, b.price
+FROM books b
+JOIN order_items oi ON b.id = oi.book_id
+ORDER BY b.price DESC
+LIMIT 1;
